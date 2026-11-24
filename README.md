@@ -1,6 +1,6 @@
 # StudySpot 🪑
 
-StudySpot is an Android app that helps students find and reserve available study seats in campus libraries.
+#### StudySpot is an Android app that helps students find and reserve available study seats in campus libraries.
 
 ### Features
 - 🪑 Real-time seat availability
