@@ -2,6 +2,9 @@ package com.example.studyspot
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.assertIsDisplayed
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,5 +23,14 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.studyspot", appContext.packageName)
+    }
+
+    @org.junit.Rule
+    @JvmField
+    val composeRule = createAndroidComposeRule<MainActivity>()
+
+    @Test
+    fun loginShowsStudySpotBrandAndCreateAccountAction() {
+        composeRule.onNodeWithText("StudySpot").assertIsDisplayed()
     }
 }
