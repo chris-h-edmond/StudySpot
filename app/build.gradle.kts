@@ -13,13 +13,13 @@ val localConfig = Properties().apply {
 val groqApiKeyForDebug = "\"${localConfig.getProperty("GROQ_API_KEY", "").replace("\\", "\\\\").replace("\"", "\\\"")}\""
 
 android {
-    namespace = "com.example.studyspot"
+    namespace = "com.chris.studyspot"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.studyspot"
+        applicationId = "com.chris.studyspot"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
